@@ -5,7 +5,7 @@ import '../style/item.css'
 function Item() {
     let sum = 0
     
-/// Because myData didn't consiste quantite and total i added them by hook 
+/// Because myData didn't consist quantity and totals i added them by hook 
     const[modData,setModData] = useState(
         dataItem.map(function(e){
             return (
@@ -46,7 +46,7 @@ function Item() {
         }))
     }
 
-/// Using arr it's gonna be push all totals from modData
+/// Using arr it's gonna push all totals from modData
  let arr = []
  pushIt()
  function pushIt (){
@@ -84,11 +84,11 @@ useEffect(()=>{
                     <div key={e.id} className='row' >
                         <div ><img src={e.image} alt=""/></div>
                         <div>
-                            <div>{e.name}</div>
+                            <div className='grey' >{e.name}</div>
                             <div className='price' > $ {e.price}</div>
                         </div>    
                         <div className='btns_section' >
-                            <div>Quantity</div>
+                            <div className='grey'>Quantity</div>
                             <div className='btns'>
                                 <button onClick = {() => {addItems(e.id)}} >+</button>
                                 <div> {e.quantity}</div>
@@ -96,7 +96,7 @@ useEffect(()=>{
                             </div>
                         </div>
                         <div className='section_total' >
-                            <div  >Total</div>
+                            <div  className='grey'>Total</div>
                             <div className='total' > {e.total}</div>
                         </div>
                     </div> 
@@ -108,7 +108,7 @@ useEffect(()=>{
                 <div className='itemsPrice' >
                     <h4>Items {modData.length}</h4>
                     <h2 >
-                      {sum}
+                      $ {sum}
                     </h2>
                 </div>
             </div>

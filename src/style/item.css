@@ -13,6 +13,7 @@
   display: flex;
   justify-content: space-between;
   margin: 10px;
+  border: 1px solid grey;
 }
 
 .row img {
@@ -50,6 +51,15 @@
 
 .right h3 {
   margin-top: 10px;
+  font-weight: 300;
+}
+
+.right h4 {
+  font-weight: 300;
+}
+
+.right h2 {
+  font-weight: 300;
 }
 
 .itemsPrice {
@@ -57,4 +67,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.grey {
+  color: gray;
+  font-weight: 100;
 }
