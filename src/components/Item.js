@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import dataItem from '../dataItem'
 import '../style/item.css'
 
 function Item() {
+    let sum = 0
+    
+/// Because myData didn't consiste quantite and total i added them by hook 
     const[modData,setModData] = useState(
         dataItem.map(function(e){
             return (
@@ -17,8 +20,6 @@ function Item() {
             )
         })
     )
-
-    let sum = 0
 
     function addItems (id){
         setModData (modData.map(function(e){
@@ -45,7 +46,7 @@ function Item() {
         }))
     }
 
-
+/// Using arr it's gonna be push all totals from modData
  let arr = []
  pushIt()
  function pushIt (){
@@ -53,8 +54,6 @@ function Item() {
          arr.push(e.total)
      })
  }
-
-
 
 getTotalSum(arr)
 function getTotalSum(array){
@@ -64,6 +63,19 @@ function getTotalSum(array){
 }
     
 
+///////LOCAL STORAGE////////
+useEffect(()=>{
+    const localData = JSON.parse(localStorage.getItem('myItems'))
+    if(localData){
+        setModData(localData)
+    }
+    
+},[])
+
+useEffect(()=>{
+    localStorage.setItem('myItems',JSON.stringify(modData))
+})
+////////////////////////////
     return (
         <div className = 'itemBlock' >
             <div className='left' >
@@ -99,7 +111,6 @@ function getTotalSum(array){
                       {sum}
                     </h2>
                 </div>
-                
             </div>
         </div>
     )
@@ -109,3 +120,7 @@ export default Item
 
 
 //1 Add Quantity
+//2 Add Minus/Plus functions
+//3 create array for subTotal
+//4 Storage
+

@@ -22,7 +22,8 @@ let data = [
         "name": "Dress",
         "price": 32,
         "image": './image/item4.jpg'
-    }
+    },
+    
 ]
 
 export default data
