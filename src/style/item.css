@@ -1,0 +1,60 @@
+.itemBlock {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  width: 70%;
+}
+
+.row {
+  padding: 10px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.row img {
+  width: 160px;
+}
+
+.price {
+  margin-top: 27px;
+}
+.btns {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.btns button {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: none;
+  font-size: 20px;
+  background-color: white;
+}
+
+.total {
+  margin-top: 27px;
+}
+
+.right {
+  padding: 10px;
+  padding-left: 30px;
+  background-color: rgb(211, 218, 228);
+  width: 30%;
+}
+
+.right h3 {
+  margin-top: 10px;
+}
+
+.itemsPrice {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
